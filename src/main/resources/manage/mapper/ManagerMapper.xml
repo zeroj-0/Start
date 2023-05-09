@@ -3,11 +3,19 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.zero.Start.manage.mapper.ManageMapper">
+
+    <!-- 뭐를 하는건지 주석을 남겨주는거 -->
     <select id="findAll" resultType="Manager">
-        SELECT USERID,
-        PASSWORD,
-        NAME,
-        DEPT
-        FROM MANAGER;
+        SELECT
+               USERID,
+               PASSWORD,
+               NAME,
+               DEPT
+         FROM
+               MANAGER
     </select>
+
+
+
+
 </mapper>

@@ -7,9 +7,6 @@ public class Manager {
     private String name;
     private String dept;
 
-    public Manager() {
-    }
-
     public String getUserId() {
         return userId;
     }
@@ -41,4 +38,5 @@ public class Manager {
     public void setDept(String dept) {
         this.dept = dept;
     }
+
 }

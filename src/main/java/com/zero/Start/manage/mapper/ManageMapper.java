@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ManageMapper {
+
     List<Manager> findAll();
+
 }
