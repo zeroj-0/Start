@@ -29,5 +29,19 @@
         LIMIT 1
     </select>
 
+    <!--  관리자 정보 저장하기  -->
+    <insert id="saveManager" parameterType="Manager">
+        INSERT INTO MANAGER(USERID, PASSWORD, NAME, DEPT) VALUES (#{userId}, #{password}, #{name}, #{dept})
+    </insert>
+
+    <!--  관리자 정보 업데이트  -->
+    <update id="updateManager" parameterType="Manager">
+        UPDATE MANAGER SET PASSWORD = #{password}, NAME = #{name}, DEPT = #{dept} WHERE USERID = #{userId}
+    </update>
+
+    <!--  관리자 계정 삭제  -->
+    <delete id="deleteManager" parameterType="String">
+        DELETE FROM MANAGER WHERE USERID = #{userId}
+    </delete>
 
 </mapper>
