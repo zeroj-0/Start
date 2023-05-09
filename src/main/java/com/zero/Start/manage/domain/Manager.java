@@ -1,5 +1,8 @@
 package com.zero.Start.manage.domain;
 
+import lombok.ToString;
+
+@ToString
 public class Manager {
 
     private String userId;

@@ -52,7 +52,7 @@ class ManageRepositoryTest {
 //        manager.setPassword("1234");
 //        manager.setName("김요미");
 //        manager.setDept("고양이과");
-//
+//자
 //        Connection con = jdbcDataSource.getConnection();
 //
 //        String sql = "UPDATE Manager SET password = ?, name = ?, dept = ? WHERE userId = ?";

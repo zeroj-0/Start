@@ -15,4 +15,7 @@ public interface ManageMapper {
 
     Manager findById(ManagerParam param);
 
+    void saveManager(Manager manager);
+    void updateManager(Manager manager);
+    void deleteManager(String userId);
 }

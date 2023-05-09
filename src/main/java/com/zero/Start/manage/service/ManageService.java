@@ -24,5 +24,26 @@ public class ManageService {
     }
 
 
+    // 관리자 회원 등록
+    public void saveManager(Manager manager) {
+        manageMapper.saveManager(manager);
+    }
+
+    // 관리자 회원 등록
+    public Manager updateManager(Manager manager) {
+        manageMapper.updateManager(manager);
+
+        ManagerParam param = new ManagerParam();
+        param.setUserId(manager.getUserId());
+
+        return manageMapper.findById(param);
+    }
+
+    // 관리자 회원 등록
+    public void deleteManager(ManagerParam param) {
+        manageMapper.deleteManager(param.getUserId());
+    }
+
+
 
 }
