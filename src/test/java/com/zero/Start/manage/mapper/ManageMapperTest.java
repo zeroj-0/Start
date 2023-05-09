@@ -1,13 +1,17 @@
 package com.zero.Start.manage.mapper;
 
 import com.zero.Start.manage.domain.Manager;
+import com.zero.Start.manage.domain.ManagerParam;
 import com.zero.Start.manage.domain.ManagerUseLombok;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+
+import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 public class ManageMapperTest {
@@ -26,6 +30,20 @@ public class ManageMapperTest {
         }
 
     }
+
+
+    @Test
+    @DisplayName("회원 ID로 가져오기")
+    void findById() {
+        ManagerParam param = new ManagerParam();
+        param.setUserId("1");
+
+        Manager manager = manageMapper.findById(param);
+
+        assertThat(param.getUserId()).isEqualTo(manager.getUserId());
+    }
+
+
 
 
     @Test

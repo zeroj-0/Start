@@ -15,7 +15,19 @@
                MANAGER
     </select>
 
-
+    <!--  회원 ID 조회 -->
+    <select id="findById" resultType="Manager" parameterType="ManagerParam">
+        SELECT
+               USERID,
+               PASSWORD,
+               NAME,
+               DEPT
+          FROM
+               MANAGER
+        WHERE
+               USERID = #{userId}
+        LIMIT 1
+    </select>
 
 
 </mapper>
