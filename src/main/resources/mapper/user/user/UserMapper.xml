@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zero.Start.manage.mapper.UserMapper">
+
+    <!-- 회원을 검색한다. -->
+    <select id="findAll" resultType="Manager" parameterType="UserParam">
+       SELECT
+               USERID,
+               USERNAME
+         FROM
+               USER
+        WHERE  1 = 1
+        <if test="userName != null">
+          AND USERNAME like " 여기 뭐가 드가야 하나... "
+        </if>
+    </select>
+
+
+
+</mapper>
