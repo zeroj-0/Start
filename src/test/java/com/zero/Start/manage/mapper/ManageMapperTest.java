@@ -40,7 +40,7 @@ public class ManageMapperTest {
     @DisplayName("회원 ID로 가져오기")
     void findById() {
         ManagerParam param = new ManagerParam();
-        param.setUserId("1");
+        param.setUserId("asdf");
 
         Manager manager = manageMapper.findById(param);
 
@@ -89,6 +89,8 @@ public class ManageMapperTest {
         manager.setDept("호랑이과");
 
         Manager result = manageService.updateManager(manager);
+
+
         System.out.println(result);
     }
 
